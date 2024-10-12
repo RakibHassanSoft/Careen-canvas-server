@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "carearcanvas",
+  "private_key_id": "36e60dcac9656c7a20785ca35bbce6f59f730e27",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC27+HgcHhRgWlc\n4ybnsBK0DcfrVQ2mL7x2QJNxFglB0eavvgtFuXd3iqa+NbduEd8zzKUIDaEwO63b\ndzZh6841lnXmqGmmRaGSofqQvKhoeTA5RwBYRWl81NKQfUn5V8KTIswfARSf+4O0\ngh4Qm2hM7Kl7Jpjzpupc5nx/R/yfym+C9ihv3LyDjcdBGScHMJcD6F9xOfWHYkbv\nnpFTxJjgtm5Ka1IZkW+Q7oPWs9ZBaLG/c/OkaQb8T1vcF+1vuFTlSmNL/0rVBFqg\nIp4w6fRloJkxAoCulI+jF85E5HTkemKX3cWBeNOaPpMDhH+0bYD2X6aRCFTFVvA8\n3nFSbRh9AgMBAAECggEAHgwruS4wDQ8pC7lBwCdzAwEKd9R6D/RiS7gSn64Dajy8\nW9xmxJaQkWGEPtTa4qjr1PnFl5uJgL8ksNoVZCMTtUiX6AF8jPN99PRHEDP0o2hY\na+gGHfmUuIzKYzI5DswD6R/7kBIg3aA1w1Xl80tbZ9stgU1XLRoa/5RaGZvs2h/i\ndaZ43u4vFtKje1o1we66DxC1xCBjzUgO4hrCDFjJ/PViXLPgd1+n480wJaShRCoz\n3ZlB0G9vw8YWjXTsbD36WdaT0XtN3T9nTQX+qtIaBQ/5XvtttHoZ4yH/ByW5VXmZ\ndajHen+Wyixq11Anmi+/SB3XsIlSxOVcyllUEFF83wKBgQDay0NcAXmUl3MnlOyZ\nOnsmEf32GVWy6lNR6NFiL65eKsTfmirDMWV7Awq6ps1kWbkfyYB7oxSZcFpVBdrM\nidLn0ZpIW7/2vnEX8FFqc8+/jLoQc73x8OIOftrCuUYkHTDohCovV1PKSnLOqOly\nh7XtHz6BUhgyLbt4Lt319mRKmwKBgQDWC6l2synIHejjeZLTQ1teF0VGL4q/Nu40\noJh0womWVh4X3Dsn3bFgkpKt1H/1h9uEsfe3RbVn2I/i8u6jqKLuA8SEq9kIzjBQ\nmdXxKmvXbZvWO83VgZfcL1XhpnNFUqBpvpqyEOkWWY2yKs3gFog9jRHbvSwCuCNF\nW80sr4HuxwKBgQDJHr2djpGHQKyO/vt6YuKe/Tz5AxLe8z2B9sS6P+BGGYR9koaq\nhPam3AX5y6jUDRH6IU0k2aTu4vN2YnpdOHgRtn/e8dAE7cyh17vPYgPfLWpAA1Tg\nWLBD6OIIyyypt9ekdREeEWUpd8QPKf/l0tAt12GqmJ87SQSiFlrcZRCN7wKBgGtK\nzzh72H7CV2HnJ+0UP3FrssLaw+7ThxYERkeI2FTueAk30MNMAkTJVBMkiLu3zRa3\n6tcIb0VNrdpyMaMBviIW62QhjBo42MkeQ7quq/4BqHL76VKTsl6hr6f7up5OK7C1\n5W9KwLv+SeO8RxSD1ukblI8URUJbsPpsaO10UGozAoGBAIGGfHzYwam+VRFQOKVv\nNuEFxyA+d+V0lUQb2jstECqgL4R85VvGi79eCo/lLTrOHh2GNGsVXQ9klAudf8rO\nEbqL4084EWRL/xk8Ae/cSaPHsMDAp7MZmno+4+1dkCy6Xrx63/wmrOU+cylC/iSa\nnFlDeQOuXi2sBnQTRdj98t7B\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-drxx8@carearcanvas.iam.gserviceaccount.com",
+  "client_id": "114863362276142094824",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-drxx8%40carearcanvas.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
