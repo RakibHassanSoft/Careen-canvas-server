@@ -12,7 +12,7 @@ const {
     addReviewToGig,
     getAllReviewsForGig
 } = require('./gigController');
-const { adminCheck, authMiddleware } = require('../Middelware/Middleware');
+const { adminCheck, authMiddleware } = require('../Middleware/Middleware');
 
 
 const router = express.Router();

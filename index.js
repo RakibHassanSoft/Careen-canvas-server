@@ -13,6 +13,8 @@ const FromData = require("./FromData/formDataRoutes")
 const PDFRoute = require('./PDF/PdfRoute')
 const gitRoute = require('./Gigs/gigRoute')
 const ApplyJobRoute = require('./ApplyNow/ApplyRoute')
+const chatRoute = require('./chat/Routes/routes')
+
 
 require("dotenv").config();
 // Body parser middleware to parse JSON request bodies
@@ -59,6 +61,10 @@ app.use('/api', gitRoute)
 
 // Job Apply Route
 app.use('/api', ApplyJobRoute)
+
+// chat
+app.use('/api', chatRoute)
+
 
 // Server listening
 const PORT = process.env.PORT || 8000;
