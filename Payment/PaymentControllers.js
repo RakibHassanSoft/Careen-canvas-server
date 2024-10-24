@@ -53,7 +53,7 @@ exports.payments = async (req, res) => {
     );
 
     console.log('Payment saved/updated:', payment);
-    
+
     return res.status(201).send(payment);
   } catch (error) {
     console.error("Error creating/updating payment:", error);
@@ -63,3 +63,16 @@ exports.payments = async (req, res) => {
     });
   }
 };
+
+exports.getPayments = async (req, res) => {
+  try {
+    const payments = await Payment.find({});
+    return res.status(200).json(payments);
+  } catch (error) {
+    console.error("Error retrieving payments:", error);
+    return res.status(500).json({
+      message: "Failed to retrieve payment listing",
+      error: error.message,
+    });
+  }
+}

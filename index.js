@@ -13,6 +13,7 @@ const FromData = require("./FromData/formDataRoutes")
 const PDFRoute = require('./PDF/PdfRoute')
 const gitRoute = require('./Gigs/gigRoute')
 const ApplyJobRoute = require('./ApplyNow/ApplyRoute')
+const chatUser = require('./ChatMVC/Route/routes')
 
 require("dotenv").config();
 // Body parser middleware to parse JSON request bodies
@@ -24,7 +25,7 @@ connectDB()
 //   // origin: '*',
 // }));
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:5174', 'https://calm-platypus-028451.netlify.app' , 'https://teal-taffy-a34964.netlify.app'],
+  origin: ['http://localhost:5173', 'http://localhost:5174', 'https://calm-platypus-028451.netlify.app', 'https://teal-taffy-a34964.netlify.app'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Specify the HTTP methods allowed
   credentials: true,  // Enable this if you're using cookies or authentication tokens
 }));
@@ -58,7 +59,10 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use('/api', gitRoute)
 
 // Job Apply Route
-app.use('/api', ApplyJobRoute)
+app.use('/api', ApplyJobRoute);
+
+// chat api
+app.use('/api', chatUser)
 
 // Server listening
 const PORT = process.env.PORT || 8000;
