@@ -4,7 +4,7 @@ const mongoose= require("mongoose")
 const UserSchemaMethod = require("./UserSchema Method")
 
  const UserSchema= new  mongoose.Schema({
-     name:{
+   fullName:{
         type:String,
         required:true,
 
@@ -17,12 +17,11 @@ const UserSchemaMethod = require("./UserSchema Method")
      },
      password:{
         type:String,
-        required:true,
+      
 
      },
      firebaseUid: {
       type: String,
-      required: true,
       unique: true, 
     },
     role: {

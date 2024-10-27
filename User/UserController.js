@@ -6,21 +6,17 @@ const { sendCongratulatoryEmail } = require("../Nodemailer/email");
 exports.register = async (req, res) => {
   const { name, email, password } = req.body;
   try {
-    const firebaseUser = await admin.auth().createUser({
-      email: email,
-      password: password,
-    });
 
     const user = new User({
       name,
       email,
       password,
-      firebaseUid: firebaseUser.uid,
+
     });
-    await user.save();
-    // Send a congratulatory email
-    sendCongratulatoryEmail(email, name);
-    console.log(email,name);
+
+    const res = await user.save();
+    console.log(res)
+    // console.log(email,name);
     res.status(200).send("User is registered");
   } catch (error) {
     res.status(400).json({ error: error.message });
@@ -48,23 +44,14 @@ exports.login = async (req, res) => {
 // Get All Users
 exports.getAllUsers = async (req, res) => {
   try {
-    // Firebase theke users niye asha
-    const listUsersResult = await admin.auth().listUsers();
-    const firebaseUsers = listUsersResult.users; // Firebase er users array
+    // Fetch MongoDB users
+    const dbUsers = await User.find(); // Fetch users from MongoDB
 
-    // MongoDB theke users niye asha
-    let dbUsers = [];
-    try {
-      dbUsers = await User.find(); // User hocche apnar MongoDB user model
-    } catch (dbError) {
-      console.error("Database error:", dbError);
-    }
-
-    // Firebase ebong MongoDB users ke ek sathe response er maddhome pathano
-    res.status(200).json({ firebaseUsers, dbUsers });
+    // Send response with MongoDB users
+    res.status(200).json({ dbUsers });
   } catch (error) {
-    console.error("Firebase user error:", error);
-    res.status(500).json({ error: error.message });
+    console.error("Database error:", error);
+    res.status(500).json({ error: 'Failed to fetch MongoDB users' });
   }
 };
 

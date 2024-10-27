@@ -3,6 +3,11 @@ const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const path = require('path');
+// for socket io server
+const http = require('http');
+const socketIo = require('socket.io');
+const server = http.createServer(app);
+const io = socketIo(server, { cors: { origin: '*' } });
 
 // Routes
 const UserRoute = require('./User/UserRoute')
@@ -13,7 +18,7 @@ const FromData = require("./FromData/formDataRoutes")
 const PDFRoute = require('./PDF/PdfRoute')
 const gitRoute = require('./Gigs/gigRoute')
 const ApplyJobRoute = require('./ApplyNow/ApplyRoute')
-const chatRoute = require('./chat/Routes/routes')
+
 
 
 require("dotenv").config();
@@ -58,12 +63,19 @@ app.use('/api', gitRoute)
 // Job Apply Route
 app.use('/api', ApplyJobRoute)
 
-// chat
-app.use('/api', chatRoute)
+// chat with socket.io
+
+io.on('connection', (socket) => {
+  console.log('New user connected');
+
+  socket.on('disconnect', () => {
+    console.log('User disconnected');
+  });
+});
 
 
 // Server listening
 const PORT = process.env.PORT || 8000;
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
